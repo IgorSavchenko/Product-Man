@@ -98,22 +98,24 @@ body {
 }
 
 
-.navigation-item-reference:link, .navigation-item-reference:hover, .navigation-item-reference:visited, .navigation-item-reference:active {
+.navigation-item-reference:link,
+.navigation-item-reference:visited,
+.navigation-item-reference:hover,
+.navigation-item-reference:active {
   text-decoration: none;
-  color: #303030;
 }
 
 /*BODY*/
 
 .container {
-  margin: 0 150px;
+  margin: 0 150px 185px;
   padding: 0;
   font-size: 0;
 }
 
 .item-info {
   display: inline-block;
-  max-width: 618px;
+  width: 618px;
   margin: 0;
   padding: 0;
   vertical-align: top;
@@ -121,7 +123,8 @@ body {
 
 .item-heading {
   display: block;
-  margin: 0;
+  width: 100%;
+  margin: -18px 0 0 -7px;
   padding: 0;
   font-family: Raleway, sans-serif;
   font-size: 150px;
@@ -131,34 +134,35 @@ body {
   text-align: right;
   color: #303030;
   text-transform: uppercase;
-  word-break: normal;
-  white-space: nowraps;
+  /*word-break: normal;
+  white-space: nowraps;*/
 }
 
 .item-description {
   display: block;
-  height: 100px;
-  margin: 53px 6px 25px 41px;
+  height: 104px;
+  margin: 22px 3px 17px 41px;
   padding: 0;
   font-family: Roboto;
   font-size: 24px;
   font-weight: 300;
   line-height: 1.5;
   letter-spacing: 0.6px;
-  text-align: right;
+  text-align: left;
   color: #303030;
   text-align: right;
   overflow: hidden;
   outline: none;
+  word-break: break-all;
+  white-space: normal;
 }
 
 .item-reference {
-
   display: block;
-  margin: 0;
-  padding: 0;
+  margin-right: 0 0 0 25px;
+  padding-right: 3px;
   text-decoration: none;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-size: 24px;
   font-weight: bold;
   line-height: 1.5;
@@ -167,12 +171,18 @@ body {
   color: #e10011;
 }
 
-.item-image {
+.item-reference:link,
+.item-reference:visited,
+.item-reference:hover,
+.item-reference:active {
+  text-decoration: none;
+}
+
+.item-photo {
   display: inline-block;
   width: 365px;
   height: 491px;
   padding: 0;
-  margin: 0;
-  background: url('../img/beats-headphones.png') no-repeat 100%;
-  /*margin: -19px 115px 185px 0;*/
+  margin: -18px 100px 0 100px;
+  background: url('../img/beats-headphones.png') no-repeat 100% #eeeeee;
 }
