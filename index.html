@@ -16,44 +16,146 @@
   <link rel="icon" href="assets/icons/favicon.png">
 </head>
 
-<!-- HEADER -->
-
-<header class="main-header">
-  <nav class="navigation">
-    <h1 class="navigation-heading">ProductMan</h1>
-    <ul class="navigation-list">
-      <li class="navigation-item">
-        <a href="#" class="navigation-item-reference">Recent Work</a>
-      </li>
-      <li class="navigation-item">
-        <a href="#" class="navigation-item-reference">Featured Product</a>
-      </li>
-      <li class="navigation-item">
-        <a href="#" class="navigation-item-reference menu"></a>
-      </li>
-    </ul>
-  </nav>
-</header>
-
 <!-- BODY -->
 
 <body>
 
-  <!-- BLACK&WHITE content -->
-  <div class="container main-content">
-    <div class="item-info">
-      <h2 class="item-heading">
-        Black&
-        White
-      </h2>
-      <p class="item-description">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+  <div class="container">
+
+<!-- HEADER -->
+
+    <header class="global-header">
+      <nav class="menu">
+        <h1 class="menu__heading">ProductMan</h1>
+        <div class="menu__navigation">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Recent Work</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Featured Product</a>
+            </li>
+          </ul>
+          <a class="menu__link" href="#">
+            <i class="icon icon--menu fa-bars">&#xf0c9;</i>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+<!-- BLACK&WHITE content -->
+
+      <div class="slider">
+       <article class="slider__product">
+         <h2 class="slider__heading">
+           Black&
+           White
+         </h2>
+         <p class="slider__description">
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+           in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit
+           voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
+           quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+           aliquam quaerat voluptatem.
+         </p>
+         <a class="slider__link" href="#">View Project</a>
+       </article>
+        <img class="slider__image" src="assets/img/beats-headphones.png" alt="Beats Headphones">
+      </div>
+
+<!-- FEATURED PRODUCT content -->
+
+    <article class="products">
+      <h3 class="products__heading">Featured Product</h3>
+      <!-- <span class="products__underline">underline</span> -->
+      <p class="products__description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
-      <a href="#" class="item-reference">View Project</a>
-    </div>
-    <div class="item-photo"></div>
-  </div>
+      <div class="products__galery">
+        <div class="products__item">
+          <a class="products__link" href="#">
+            <img class="products__image" src="assets/img/speaker-pill-white-standard-thrqrtleft.jpg" alt="Speaker beats">
+          </a>
+        </div>
+        <div class="products__item">
+          <a class="products__link" href="#">
+            <img class="products__image" src="assets/img/beats-by-dre-studio-red-highdefinition-headphones.jpg" alt="Red headphones">
+          </a>
+        </div>
+        <div class="products__item">
+          <a class="products__link" href="#">
+            <img class="products__image" src="assets/img/minimal-product-design.jpg" alt="Fitnes tracker">
+          </a>
+        </div>
+        <div class="products__item">
+          <a class="products__link" href="#">
+            <img class="products__image" src="assets/img/Casual-Shoes-For-Men-2.jpg" alt="Casual shoes">
+          </a>
+        </div>
+        <div class="products__item">
+          <a class="products__link" href="#">
+            <img class="products__image" src="assets/img/tumblr_nko8p7po0T1qddxjwo3_1280.jpg" alt="Cool chair">
+          </a>
+        </div>
+      </div>
+    </article>
+
+<!-- SUBSCRIBE content -->
+
+    <article class="subscribe">
+      <h3 class="subscribe__heading">Product News</h3>
+      <p class="subscribe__description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <form class="subscribe__form" id="subscribe__form" action="index.html" method="post">
+        <div class="subscribe__block">
+          <i class="icon icon--input fa-envelope-o">&#xf003;</i>
+          <input class="subscribe__input" form="subscribe__form" type="email" placeholder="Enter your email address">
+        </div>
+        <button class="subscribe__button" type="submit">
+          <span>subscribe <i class="icon icon--button fa-caret-right">&#xf0da;</i></span>
+        </button>
+      </form>
+    </article>
+
+<!-- SOCIAL content -->
+
+    <article class="social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <i class="icon icon--social fa-facebook">&#xf09a;</i>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <i class="icon icon--social fa-twitter">&#xf099;</i>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <i class="icon icon--social fa-youtube">&#xf167;</i>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <i class="icon icon--social fa-medium">&#xf23a;</i>
+          </a>
+        </li>
+      </ul>
+    </article>
+
+<!-- FOOTER -->
+
+  <footer class="global-footer">
+    <article class="copyright">
+      <p class="copyright__text">
+        © Copyright <span>Your Company</span> ltd 2016. All Rights Reserved.
+      </p>
+    </article>
+  </footer>
+
+</div><!-- container -->
 
 </body>
 
