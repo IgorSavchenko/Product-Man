@@ -6,6 +6,69 @@
   font-style: normal;
 }
 
+/*ANIMATION*/
+
+@-webkit-keyframes swing {
+  15% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  30% {
+    -webkit-transform: translateX(-4px);
+    transform: translateX(-4px);
+  }
+  40% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  50% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  65% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  30% {
+    -webkit-transform: translateX(-4px);
+    transform: translateX(-4px);
+  }
+  40% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  50% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  65% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.swing:hover {
+  -webkit-animation: swing 0.5s ease;
+  animation: swing 0.5s ease;
+   -webkit-animation-iteration-count: 1;
+   animation-iteration-count: 1;
+}
+
 /*ALL ELEMENTS */
 
 * {
@@ -117,12 +180,24 @@ body {
   text-decoration: none;
 }
 
-.menu__navigation > .menu__link {
+.menu__link:hover {
+color: #e10011;
+transition: all 0.3s ease;
+}
+
+.menu__link--main {
   float: right;
   width: 17px;
   /*height: 14px;*/
   margin-left: 38px;
   /*margin: 0 -1px 12px 38px;/*PerfectPixel*/
+}
+
+.menu__link--main:hover .icon--menu{
+  box-shadow:
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  transition: all 0.3s ease;
 }
 
 /*BLACK&WHITE content*/
@@ -181,7 +256,8 @@ body {
 }
 
 .slider__link {
-  display: block;
+  /*display: block;*/
+  float: right;
   margin: 25px 0 0 0;
   padding: 0;
   /*padding-right: 3px;*/
@@ -200,6 +276,11 @@ body {
 .slider__link:hover,
 .slider__link:active {
   text-decoration: none;
+}
+
+.slider__link:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease
 }
 
 .slider__image {
@@ -282,6 +363,50 @@ body {
 
 .products__link {
   display: block;
+  position: relative;
+  width: 100%;
+  height: 387px;
+}
+
+.products__link:hover {
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+.products__link--transparent:hover,
+.products__link--transparent:focus,
+.products__link--transparent:active {
+  background: url("../img/minimal-product-design.jpg") 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.products__link--transparent:hover .products__image--transparent,
+.products__link--transparent:focus .products__image--transparent,
+.products__link--transparent:active .products__image--transparent {
+  background: transparent;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(328px);
+}
+
+.products__link--transparent span {
+  position: absolute;
+  left: 37px;
+  bottom: 58px;
+  font-family: Roboto, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: left;
+  color: #ffffff;
+}
+
+.products__link--transparent span::after {
+  content: ' ';
+  display: block;
+  padding-top: 11px;
+  width: 92px;
+  height: 5px;
+  color: #ffffff;
 }
 
 /*SUBSCRIBE content*/
@@ -324,20 +449,13 @@ body {
 
 /*блок для вставки иконки в поле input*/
 .subscribe__block {
-  /*width: 100%;*/
-  /*height: 100%;*/
-  /*background-color: #ffffff;*/
-  /*display: inline;*/
-  /*position: relative;*/
   float: left;
   border-radius: 35px;
   line-height: 70px;
   text-align: left;
-
 }
 
 .subscribe__input {
-  /*float: left;*/
   position: absolute;
   left: 0;
   bottom: 0;
@@ -369,15 +487,15 @@ body {
   color: #979797;
 }
 
-.subscribe__input:focus {
+.subscribe__input:focus .icon--input {
   pointer-events: none;
+  z-index: -1;
 }
 
 .subscribe__button {
   position: absolute;
   right: 0;
   bottom: 0;
-  /*float: right;*/
   height: 100%;
   padding: 0;
   border: none;
@@ -394,7 +512,6 @@ body {
   text-transform: uppercase;
   color: #fff;
 }
-
 
 /*SOCIAL content*/
 
@@ -485,19 +602,15 @@ body {
   bottom: 0;
   z-index: 1;
   padding: 0 14px 0 32px;
-  /*display: inline;*/
-  /*width: 20px;*/
-  /*height: 15px;*/
   font-size: 18px;
-  /*line-height: 1.33;*/
   letter-spacing: 0.5px;
   color: #979797;
+  pointer-events: none;
 }
 
 .icon--button {
   font-size: 18px;
   color: #ffffff;
-  /*padding-right: 44px;*/
 }
 
 .icon--social {
